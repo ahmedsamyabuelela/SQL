@@ -1,0 +1,32 @@
+create table tech(id integer primary key, name text, quantity integer,model_number text,price integer);
+INSERT INTO tech VALUES (1,"samsung galaxy book 3",10,101012545,1000);
+INSERT INTO tech VALUES (2,"samsung galaxy s10",3,14552000,500);
+INSERT INTO tech VALUES (3,"samsung galaxy s21",10,25412545,800);
+INSERT INTO tech VALUES (4,"samsung galaxy s22",12,215561964,1000);
+INSERT INTO tech VALUES (5,"samsung galaxy s23",50,3126458956,1200);
+INSERT INTO tech VALUES (6,"samsung galaxy book 2",12,21354684,1000);
+INSERT INTO tech VALUES (7,"asus book 1",32,797756131,200);
+INSERT INTO tech VALUES (8,"asus zen book 13",65,79864531,1600);
+INSERT INTO tech VALUES (9,"msi creator 17hx",12,123648977,4200);
+INSERT INTO tech VALUES (10,"msi creator 16hx",15,32116548,4000);
+INSERT INTO tech VALUES (11,"galaxy tab 7",45,34648661,400);
+INSERT INTO tech VALUES (12,"galaxy tab 8",54,32546487,600);
+INSERT INTO tech VALUES (13,"galaxy tab 9",215,7861658,800);
+INSERT INTO tech VALUES (14,"lenovo legion 5 pro",60,3549865,2500);
+INSERT INTO tech VALUES (15,"lenovo thinkbpad z16",98,13254849,3000);
+INSERT INTO tech VALUES (16,"sony headphones hx5000",236,65356,350);
+INSERT INTO tech VALUES (17,"lg monitor 24 inch",54,97846512,500);
+INSERT INTO tech VALUES (18,"samsung monitor 21 inch",63,4531,450);
+
+--display the database ordered by price.
+SELECT * FROM tech ORDER BY price;
+
+--what is the avg price of items in the bulk section? 
+SELECT AVG(price) FROM tech"avg bulk item price";
+
+--order data by name where data is less than 50
+SELECT name, quantity FROM tech WHERE quantity<50 ORDER BY quantity;
+
+-- display total cost of products in store.
+SELECT SUM(price)from tech;
+
